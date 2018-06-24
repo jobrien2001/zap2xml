@@ -9,15 +9,6 @@ mkdir -p \
 	echo "copy script into the config folder and restart the container" && \
 	exit 1
 
-# check variables
-if [ -z "$EMAIL" ] || [ -z "$PASSWORD" ]; then
-	echo "Please pass your EMAIL and PASSWORD as environment variables in your docker run command. See docker info for more details."
-	exit 1
-else
-  echo "Retrieving email and password from the environment variables"
-  echo -e "EMAIL=\"$EMAIL\" PASSWORD=\"$PASSWORD\" EXTRAPARAM=\"$EXTRAPARAM\"" > /app/zap2xml.conf
-fi
-
 # set permissions
 chown -R abc:abc \
 	/app \
