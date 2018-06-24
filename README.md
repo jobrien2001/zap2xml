@@ -8,8 +8,6 @@ docker create \
   -e PUID=<uid> \
   -e PGID=<gid> \
   -e TZ=America/New_York \
-  -e EMAIL=<email> \
-  -e PASSWORD=<password> \
   -e EXTRAPARAM="<extra parameters for zap2xml>" \
   aptalca/zap2xml:<tag>
   ```
